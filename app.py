@@ -28,7 +28,7 @@ for fname in file_list:
     st.write(fname)
     with open(os.path.join(img_path, fname),"rb") as file:
         btn = st.download_button(
-                label = "Downloda image",
+                label = "Download image",
                 data=file,
                 file_name=fname,
                 mime="image/png"
