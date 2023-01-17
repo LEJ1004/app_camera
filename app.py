@@ -17,7 +17,7 @@ name = col2.text_input('성명')
 pic = st.camera_input('사진찍기')
 
 if pic is not None:
-    img_name = hakbun + name
+    img_name = hakbun+name
     fname, ext = os.path.splitext(pic.name)
     with open(os.path.join(img_path, img_name+ext),'wb') as f:
         f.write(pic.getbuffer())
