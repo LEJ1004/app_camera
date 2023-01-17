@@ -25,5 +25,16 @@ if pic is not None:
 file_list = os.listdir(img_path)
 st.write(file_list)
 
+for fname in file_list:
+    st.write(fname)
+
+    with open(os.path.join(ima_path, fname),"rb") as file:
+        btn = st.download_button(
+                label = "Downloda image",
+                data=file,
+                file_name=fname,
+                mime="image/png"
+       )
+
 
 
