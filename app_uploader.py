@@ -7,3 +7,6 @@ if not os.path.exists(img_path):
 
 uploaded_file = st.file_uploader('이미지선택',type=['jpg','png'])
 
+if uploaded_file is not None:
+    with open(os.path.join(img_path, uploaded_file.name),'wb') as f:
+        f.write(uploaded_file.getbuffer())
