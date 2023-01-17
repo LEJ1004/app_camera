@@ -8,3 +8,4 @@ hakbun = col1.text_input('학번')
 name = col2.text_input('성명')
 
 
+
